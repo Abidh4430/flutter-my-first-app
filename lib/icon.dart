@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 
-class HomePage extends StatelessWidget{
-  HomePage({super.key});
+class IconWidget extends StatelessWidget{
+  IconWidget({super.key});
   @override
 
   Widget build(BuildContext context){
@@ -16,12 +16,9 @@ class HomePage extends StatelessWidget{
           Icon(Icons.notification_add),
           Icon(Icons.shopping_bag),
         ],
-        elevation: 10,
+        elevation: 100,
       ),
-      body: Text("hello flutter",style: TextStyle(
-        fontSize: 30,fontWeight:FontWeight.bold,color: Colors.amber),
-        overflow: TextOverflow.ellipsis,
-        maxLines: 4,)
+      body: ImageIcon(AssetImage("assets/images/icons/google-symbol.png")),
     );
   }
 }

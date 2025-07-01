@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 
-class HomePage extends StatelessWidget{
-  HomePage({super.key});
+class ImageWidgets extends StatelessWidget{
+  ImageWidgets({super.key});
   @override
 
   Widget build(BuildContext context){
@@ -18,10 +18,12 @@ class HomePage extends StatelessWidget{
         ],
         elevation: 10,
       ),
-      body: Text("hello flutter",style: TextStyle(
-        fontSize: 30,fontWeight:FontWeight.bold,color: Colors.amber),
-        overflow: TextOverflow.ellipsis,
-        maxLines: 4,)
+      body:Image.asset(
+        "assets/images/steak.jpg",
+        height: 500,
+        width: 150,
+      ),
     );
   }
 }
+     

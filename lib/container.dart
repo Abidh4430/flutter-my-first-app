@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 
-class HomePage extends StatelessWidget{
-  HomePage({super.key});
+class ContainerPage extends StatelessWidget{
+  ContainerPage({super.key});
   @override
 
   Widget build(BuildContext context){
@@ -18,10 +18,18 @@ class HomePage extends StatelessWidget{
         ],
         elevation: 10,
       ),
-      body: Text("hello flutter",style: TextStyle(
-        fontSize: 30,fontWeight:FontWeight.bold,color: Colors.amber),
-        overflow: TextOverflow.ellipsis,
-        maxLines: 4,)
+      body:Container(
+        padding: EdgeInsets.all(25),
+        margin: EdgeInsets.all(10),
+        height: 150,
+        width: 250,
+
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(25),
+          color: Colors.blue,
+        ),
+        child: Text("Hello Flutter"),
+      ),
     );
   }
 }
