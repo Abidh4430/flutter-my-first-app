@@ -8,6 +8,7 @@ import 'package:flutter_application_3/images.dart';
 import 'package:flutter_application_3/layout_widgets.dart';
 import 'package:flutter_application_3/row_widgets.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:ColumnWidgets() ,
+      home:RowWidgets() ,
       debugShowCheckedModeBanner: false,
     );
   }
