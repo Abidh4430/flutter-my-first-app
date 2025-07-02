@@ -16,7 +16,7 @@ class ListViewSeparatedWidget extends StatelessWidget {
           height: 40,
           width: double.infinity,
           color: Colors.yellow,
-        )
+        );
       }
       ),
     );
