@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 
 class IconWidget extends StatelessWidget{
-  IconWidget({super.key});
+  const IconWidget({super.key});
   @override
 
   Widget build(BuildContext context){

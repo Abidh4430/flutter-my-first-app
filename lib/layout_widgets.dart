@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class LayoutWidgets extends StatelessWidget{
-  LayoutWidgets({super.key});
+  const LayoutWidgets({super.key});
 
+  @override
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(title: Text("Layout widgets"),
@@ -22,9 +23,9 @@ class LayoutWidgets extends StatelessWidget{
             width: 350,
             decoration: BoxDecoration(
               color: Colors.green,borderRadius: BorderRadius.circular(15)),
+              alignment: Alignment.center,
               child: Text("Hello Flutter",
               style: TextStyle(fontSize: 25,color: Colors.amber)),
-              alignment: Alignment.center,
           ), 
           ),
     );
