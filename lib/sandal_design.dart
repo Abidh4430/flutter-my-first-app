@@ -1,14 +1,18 @@
+import 'package:flutter_application_3/database.dart';
 import 'package:flutter/material.dart';
 
-class SandalDesign extends StatelessWidget{
-  SandalDesign({super.key});
+class sandaldesign extends StatelessWidget {
+  sandaldesign({super.key});
+
+  
 
   @override
+
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
         leading: Icon(Icons.arrow_back),
-        title: Text("Woven Styles"),
+        title: Text("WOVEN STYLES"),
         centerTitle: true,
         actions: [
           Icon(Icons.chat),
@@ -19,36 +23,44 @@ class SandalDesign extends StatelessWidget{
               top: 12,
               right: 3,
               child: CircleAvatar(
-                radius: 6,
-                backgroundColor: Colors.black,
-                child: Text(
-                  "1",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 5,
-                    fontWeight: FontWeight.bold),
-                ),
-              ),
-            )
+              radius: 6,
+              backgroundColor: Colors.black,
+              child: Text("1",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 5,
+                fontWeight: FontWeight.bold
+              ),),
+            ))
           ],)
         ],
+      ),
+      body: GridView.builder(
+        itemCount: 6,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,
         ),
-        body: GridView.builder(
-          itemCount: 6,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount:2,mainAxisSpacing: 5,crossAxisSpacing: 10),
-          itemBuilder: (context, index) {
-            return Container(
-              color: Colors.red,
+        itemBuilder: (context,index){
+          return Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.grey.shade200),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
               child: Column(
                 children: [
-                  Container(height: 100,width: 100,color: Colors.yellow),
-                  Text("ocayle"),
-                  Text("100"),
+                  Container(height: 300,width: 300,
+                  decoration: BoxDecoration(image: DecorationImage(image: AssetImage(Database.myList[index]["image"]))),
+                  
+                  ),
+                  Text(Database.myList[index]["name"]),
+                  SizedBox(height: 50,),
+                  Text("\$${Database.myList[index]["price"]}"),
                 ],
               ),
-            );
-          }
-        ),
+            ),
+          );
+        }
+      ),
     );
   }
 }

@@ -17,6 +17,7 @@ import 'package:flutter_application_3/list_view.dart';
 import 'package:flutter_application_3/list_view_builder.dart';
 import 'package:flutter_application_3/list_view_separated.dart';
 import 'package:flutter_application_3/row_widgets.dart';
+import 'package:flutter_application_3/sandal_design.dart';
 import 'package:flutter_application_3/stack_widget.dart';
 
 
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:CardWidget() ,
+      home:SandalDesign() ,
       debugShowCheckedModeBanner: false,
     );
   }
